@@ -1,0 +1,29 @@
+.realtors {
+    //background-color: $color-grey-light-2;
+    grid-row: 5 / 6;
+    grid-column: full-start / full-end;
+
+    padding: 10rem 0;
+
+    display: grid;
+    grid-template-rows: 40rem;
+    grid-template-columns: repeat(5, 1fr);
+
+    column-gap: 1.7rem;
+
+    @include respond(width900) {
+
+
+        grid-column: center-start / center-end;
+
+        grid-template-rows: 40rem;
+        grid-auto-rows: 40rem;
+        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        gap: 1.7rem;
+
+
+
+    }
+
+
+}

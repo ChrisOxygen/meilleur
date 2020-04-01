@@ -1,0 +1,23 @@
+.btn {
+    border: none;
+    background-color: $color-grey-dark-3;
+    text-align: center;
+    display: block;
+    border-radius: 0;
+    padding: 1.1rem 2rem;
+    text-transform: uppercase;
+    font-family: $other-heading-font;
+    text-align: center;
+    font-weight: 400;
+
+    &--light {
+        background-color: $color-primary-light;
+        color: $color-primary;
+    }
+}
+
+.btn-plain {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}

@@ -1,0 +1,39 @@
+//1em is equal to 16px(default browser font size)
+//order for media query(changing website responsiveness) base + typography > general layout + grid > page layout > components
+
+
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint==width1000 {
+        @media only screen and (max-width: 62.5em) {
+            @content
+        }
+
+        ; //1000px
+    }
+
+    @if $breakpoint==width900 {
+        @media only screen and (max-width: 56.29em) {
+            @content
+        }
+
+        ; //900px
+    }
+
+    @if $breakpoint==width800 {
+        @media only screen and (max-width: 50em) {
+            @content
+        }
+
+        ; //800px
+    }
+
+    @if $breakpoint==width600 {
+        @media only screen and (max-width: 37.5em) {
+            @content
+        }
+
+        ; //600px
+    }
+}

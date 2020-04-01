@@ -1,0 +1,93 @@
+.house {
+
+    display: grid;
+    grid-template-rows: 60% 1fr;
+    grid-template-columns: 1fr;
+
+    row-gap: 2rem;
+    //background-color: rgb(241, 4, 4);
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        //padding-bottom: 1rem;
+        width: 100%;
+        height: 90%;
+        background-color: $color-primary-dark;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    &:hover::before {
+        top: 10%;
+        left: 10%;
+        opacity: 1;
+    }
+
+    &__view {
+        grid-row: 1 / 2;
+
+        display: block;
+        position: relative;
+
+        .paragraph {
+            color: $color-white;
+            display: inline-block;
+            padding: .2rem 1rem;
+            background-color: orangered;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+
+        }
+    }
+
+    &__imag {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+    &__description {
+
+        grid-row: 2 / 3;
+
+        display: grid;
+        row-gap: 1rem;
+        align-content: start;
+
+        transition: all .3s;
+
+        .heading-2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: none;
+        }
+
+        .heading-4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: none;
+        }
+
+        .paragraph {
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-transform: none;
+        }
+    }
+
+    &:hover &__description {
+        transform: translateX(17%);
+        color: $color-white;
+    }
+}

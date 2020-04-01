@@ -1,0 +1,39 @@
+.heading-1 {
+    font-family: $main-heading-font;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.heading-2 {
+    font-family: $other-heading-font;
+    //text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.heading-3 {
+    font-family: $other-heading-font;
+    //text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &--white {
+        color: $color-grey-light-1;
+    }
+}
+
+.heading-4 {
+    font-family: $other-heading-font;
+    //text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &--white {
+        color: $color-grey-light-1;
+    }
+}
+
+.paragraph {
+    font-family: $paragraph-font;
+}

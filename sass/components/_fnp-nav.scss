@@ -1,0 +1,122 @@
+.fnp-nav {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(max-content, 1fr)) minmax(min-content, 20%);
+    column-gap: 4rem;
+
+    align-items: center;
+
+    @include respond(width1000) {
+
+        grid-auto-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(5, minmax(max-content, 1fr));
+        gap: 3rem;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 3rem 0;
+
+    }
+
+    @include respond(width800) {
+
+        grid-auto-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 3rem;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 3rem 0;
+
+    }
+
+    &__title {
+        color: $color-primary-dark;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 2rem;
+
+        text-align: center;
+
+        @include respond(width1000) {
+
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+
+        }
+
+    }
+
+    &__option {
+        color: $color-primary-dark;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+
+        align-items: center;
+
+        cursor: pointer;
+
+        @include respond(width1000) {
+
+            grid-template-columns: repeat(2, min-content);
+
+            justify-content: center;
+            text-align: center;
+
+        }
+    }
+
+    &__social-icons {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: currentColor;
+        display: inline-block;
+        //padding: 1rem;
+        margin-right: 1rem;
+
+        @include respond(width1000) {
+
+            justify-self: self-end;
+
+        }
+
+    }
+
+    &__item {
+        font-family: $paragraph-font;
+        color: inherit;
+        font-size: 1.4rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        position: relative;
+        transition: all .2s;
+
+        @include respond(width1000) {
+
+            justify-self: center;
+
+        }
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: $color-primary-dark;
+        //transform: scaleY(1);
+
+        //animation: apt-from-heaven 17s cubic-bezier(.47, .47, .68, .68) infinite;
+
+    }
+
+    &__item:hover::before {
+        animation: f-place .4s cubic-bezier(.68, -0.55, .26, 1.55);
+    }
+}

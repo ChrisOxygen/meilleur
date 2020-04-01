@@ -1,0 +1,54 @@
+@keyframes apt-from-heaven {
+
+    /* 0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }*/
+
+    100% {
+        transform: translateX(-250%) scale(2.5);
+    }
+}
+
+@keyframes apt-from-heaven-2 {
+
+    0% {
+        transform: translateX(250%) scale(2.5);
+    }
+
+    100% {
+        transform: translateX(0) scale(2.5);
+    }
+}
+
+@keyframes f-place {
+
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes slide-in {
+
+    0% {
+        transform: translateX(100%);
+        //display: none;
+    }
+
+    50% {
+        //display: grid;
+        transform: translateX(0);
+    }
+
+    100% {
+        //display: grid;
+        transform: translateX(0);
+    }
+}

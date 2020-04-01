@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    /*its was 10px so we did 10/16 * 100 to get the percentage(16 is the default font size for browsers*/
+    font-size: 62.5%;
+
+    @include respond(width1000) {
+        font-size: 62.5%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    //overflow: hidden;
+}
+
+/*::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}*/

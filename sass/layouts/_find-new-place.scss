@@ -1,0 +1,11 @@
+.find-new-place {
+    background-color: $color-primary-light;
+    grid-row: 8 / 9;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-rows: minmax(10rem, 1fr);
+    grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start]repeat(8, [col-start] minmax(min-content, 14rem)[col-end])[center-end] minmax(5rem, 1fr) [full-end];
+
+
+}

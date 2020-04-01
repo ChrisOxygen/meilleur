@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+
+    grid-template-rows: 10rem 100vh repeat(7, min-content);
+
+    grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start]repeat(8, [col-start] minmax(min-content, 14rem)[col-end])[center-end] minmax(5rem, 1fr) [full-end];
+
+    position: relative;
+    transition: all .2s;
+    transition-delay: 1s;
+}
+
+.featured-main {
+    grid-row: 6 / 7;
+    grid-column: full-start / full-end;
+
+    display: grid;
+
+    grid-template-rows: 1fr;
+
+    grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start]repeat(8, [col-start] minmax(min-content, 14rem)[col-end])[center-end] minmax(5rem, 1fr) [full-end];
+
+    overflow: hidden;
+
+    @include respond(width600) {
+
+
+        overflow: visible;
+
+
+
+    }
+}

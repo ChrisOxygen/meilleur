@@ -1,0 +1,77 @@
+.agent {
+
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 70% 1fr;
+
+    align-items: end;
+    overflow: hidden;
+    transition: all .3s;
+
+    &:hover &__details {
+        transform: translateY(0);
+    }
+
+    &__img {
+
+        grid-area: 1 / 1 / 2 / 3;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__details {
+
+        grid-area: 1 / 1 / 2 / 2;
+        height: 35%;
+        background-color: $color-primary-dark;
+        z-index: 2;
+        padding-top: 2rem;
+        padding-left: 1rem;
+        transform: translateY(40%);
+        transition: all .3s;
+
+        display: grid;
+        align-items: start;
+        color: $color-white;
+
+        @include respond(width1000) {
+
+            grid-area: 1 / 1 / 2 / 3;
+
+        }
+
+
+
+        .heading-2 {
+            font-weight: 400;
+            font-size: 2.3rem;
+            text-transform: capitalize;
+            //margin-bottom: 1.2rem;
+
+        }
+
+        .heading-4 {
+            align-self: start;
+
+            margin-top: -2.3rem;
+        }
+
+    }
+
+    &__social {
+        display: grid;
+        //column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+        justify-content: start;
+
+        &-icons {
+            height: 1.1rem;
+            width: 1.1rem;
+            fill: currentColor;
+            display: inline-block;
+
+        }
+    }
+}
